@@ -29,41 +29,44 @@ backend-python/
 └── .env                    # Variáveis de ambiente
 ---
 
+---
+
 ## ⚙️ Configuração do Ambiente
 
-1️⃣ Clone o repositório
+### 1️⃣ Clone o repositório
+
+```bash
 git clone https://github.com/mthsmaranhao/sistema-tarefas.git
 cd sistema-tarefas/backend-python
-
 2️⃣ Crie e ative um ambiente virtual (opcional, mas recomendado)
+bash
+Copiar código
 python -m venv venv
 # Windows:
 venv\Scripts\activate
 # Linux/Mac:
 source venv/bin/activate
-
 3️⃣ Instale as dependências
+bash
+Copiar código
 pip install -r requirements.txt
-
 4️⃣ Configure o arquivo .env
-33
 Crie (ou edite) o arquivo .env na raiz do backend:
 
+env
+Copiar código
 DB_HOST=127.0.0.1
 DB_USER=root
 DB_PASSWORD=root123
 DB_NAME=sistema_tarefas
 DB_PORT=3306
-
-
 💡 Use o mesmo usuário e senha configurados no seu MySQL Workbench.
 
----
-
-## 🧱 Banco de Dados
-
+🧱 Banco de Dados
 Execute no MySQL (Workbench ou terminal):
 
+sql
+Copiar código
 CREATE DATABASE IF NOT EXISTS sistema_tarefas;
 USE sistema_tarefas;
 
@@ -79,22 +82,18 @@ CREATE TABLE IF NOT EXISTS tarefas (
 INSERT INTO tarefas (titulo, descricao, concluida) VALUES
 ('Estudar Flask', 'Criar API simples', FALSE),
 ('Revisar SQL', 'JOINs e subconsultas', TRUE);
-
----
-## ▶️ Execução
-
+▶️ Execução
 Rode o servidor:
 
+bash
+Copiar código
 python run.py
-
-
 Se tudo estiver certo, você verá:
 
+csharp
+Copiar código
  * Running on http://127.0.0.1:3000
-
----
-
-## 🌐 Endpoints da API
+🌐 Endpoints da API
 Método	Rota	Descrição
 GET	/api/	Verifica o status da API
 GET	/api/tasks	Lista todas as tarefas
@@ -102,9 +101,9 @@ POST	/api/tasks	Cria uma nova tarefa (em breve)
 PUT	/api/tasks/<id>	Atualiza uma tarefa (em breve)
 DELETE	/api/tasks/<id>	Remove uma tarefa (em breve)
 
----
-
-## 🧩 Exemplo de Resposta (GET /api/tasks)
+🧩 Exemplo de Resposta (GET /api/tasks)
+json
+Copiar código
 [
   {
     "id": 1,
@@ -123,11 +122,7 @@ DELETE	/api/tasks/<id>	Remove uma tarefa (em breve)
     "updated_at": "2025-11-08T00:00:00"
   }
 ]
-
----
-
-##💡 Melhorias Futuras
-
+💡 Melhorias Futuras
  Adicionar endpoints POST, PUT e DELETE
 
  Implementar autenticação de usuários
@@ -138,8 +133,5 @@ DELETE	/api/tasks/<id>	Remove uma tarefa (em breve)
 
  Implementar logs e tratamento de erros
 
----
-
-## 👨‍💻 Autor
-
-Matheus Maranhão 
+👨‍💻 Autor
+Matheus Maranhão
