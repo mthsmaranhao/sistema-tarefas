@@ -119,7 +119,7 @@ Copiar código
 ```
 
 💡 Melhorias Futuras
-
+```
  Adicionar endpoints POST, PUT e DELETE
 
  Implementar autenticação de usuários
@@ -140,7 +140,7 @@ backend-python/
 ├── run.py                  # Ponto de entrada da aplicação
 ├── requirements.txt        # Dependências do projeto
 └── .env                    # Variáveis de ambiente
-
+```
 👨‍💻 Autor
 
 Matheus Maranhão
