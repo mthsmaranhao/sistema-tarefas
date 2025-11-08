@@ -42,7 +42,7 @@ DB_PORT=3306
 🧱 Banco de Dados
 
 Execute os comandos abaixo no MySQL (Workbench ou terminal):
-
+```
 CREATE DATABASE IF NOT EXISTS sistema_tarefas;
 USE sistema_tarefas;
 
@@ -58,6 +58,7 @@ CREATE TABLE IF NOT EXISTS tarefas (
 INSERT INTO tarefas (titulo, descricao, concluida) VALUES
 ('Estudar Flask', 'Criar API simples', FALSE),
 ('Revisar SQL', 'JOINs e subconsultas', TRUE);
+```
 
 ▶️ Execução
 
@@ -82,25 +83,40 @@ GET	/api/tasks	Lista todas as tarefas
 POST	/api/tasks	Cria uma nova tarefa (em breve)
 PUT	/api/tasks/<id>	Atualiza uma tarefa (em breve)
 DELETE	/api/tasks/<id>	Remove uma tarefa (em breve)
-🧩 Exemplo de Resposta (GET /api/tasks)
+
+## 🧩 Exemplo de Requisição e Resposta
+
+### 📥 Endpoint
+`GET /api/tasks`
+
+Retorna todas as tarefas cadastradas no banco de dados.
+
+### 🧠 Exemplo de Requisição
+
+```bash
+curl -X GET http://127.0.0.1:3000/api/tasks
+📤 Exemplo de Resposta (200 OK)
+json
+Copiar código
 [
   {
     "id": 1,
     "titulo": "Estudar Flask",
-    "descricao": "Criar API simples",
-    "concluida": 0,
-    "created_at": "2025-11-08T00:00:00",
-    "updated_at": "2025-11-08T00:00:00"
+    "descricao": "Criar API simples utilizando o framework Flask",
+    "concluida": false,
+    "created_at": "2025-11-08T10:32:00",
+    "updated_at": "2025-11-08T10:32:00"
   },
   {
     "id": 2,
     "titulo": "Revisar SQL",
-    "descricao": "JOINs e subconsultas",
-    "concluida": 1,
-    "created_at": "2025-11-08T00:00:00",
-    "updated_at": "2025-11-08T00:00:00"
+    "descricao": "Estudar comandos JOIN, GROUP BY e subconsultas",
+    "concluida": true,
+    "created_at": "2025-11-08T11:10:00",
+    "updated_at": "2025-11-08T11:12:00"
   }
 ]
+```
 
 💡 Melhorias Futuras
 
