@@ -94,3 +94,40 @@ GET	/api/tasks	Lista todas as tarefas
 POST	/api/tasks	Cria uma nova tarefa (em breve)
 PUT	/api/tasks/<id>	Atualiza uma tarefa (em breve)
 DELETE	/api/tasks/<id>	Remove uma tarefa (em breve)
+
+
+🧩 Exemplo de Resposta (GET /api/tasks)
+[
+  {
+    "id": 1,
+    "titulo": "Estudar Flask",
+    "descricao": "Criar API simples",
+    "concluida": 0,
+    "created_at": "2025-11-08T00:00:00",
+    "updated_at": "2025-11-08T00:00:00"
+  },
+  {
+    "id": 2,
+    "titulo": "Revisar SQL",
+    "descricao": "JOINs e subconsultas",
+    "concluida": 1,
+    "created_at": "2025-11-08T00:00:00",
+    "updated_at": "2025-11-08T00:00:00"
+  }
+]
+
+💡 Melhorias Futuras
+
+ Adicionar endpoints POST, PUT e DELETE
+
+ Implementar autenticação de usuários
+
+ Adicionar frontend em Vue.js
+
+ Criar testes automatizados (pytest)
+
+ Implementar logs e tratamento de erros
+
+👨‍💻 Autor
+
+Matheus Maranhão 
